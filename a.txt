@@ -1,7 +1,0 @@
-libpng warning: iCCP: known incorrect sRGB profile
-/home/cs18/snap/code/common/.cache/gio-modules/libgiognomeproxy.so: undefined symbol: g_task_set_name
-Failed to load module: /home/cs18/snap/code/common/.cache/gio-modules/libgiognomeproxy.so
-/usr/lib/x86_64-linux-gnu/libgnutls.so.30: version `GNUTLS_3_6_3' not found (required by /home/cs18/snap/code/common/.cache/gio-modules/libgiognutls.so)
-Failed to load module: /home/cs18/snap/code/common/.cache/gio-modules/libgiognutls.so
-/home/cs18/snap/code/common/.cache/gio-modules/libgiolibproxy.so: undefined symbol: g_task_set_name
-Failed to load module: /home/cs18/snap/code/common/.cache/gio-modules/libgiolibproxy.so
