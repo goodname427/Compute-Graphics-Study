@@ -49,6 +49,10 @@
         "list": "cpp",
         "map": "cpp",
         "set": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "chrono": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "ratio": "cpp"
     }
 }

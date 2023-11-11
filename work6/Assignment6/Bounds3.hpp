@@ -99,13 +99,13 @@ inline bool Bounds3::IntersectP(const Ray& ray, const Vector3f& invDir,
     auto t1 = (pMin - ray.origin) * invDir;
     auto t2 = (pMax - ray.origin) * invDir;
 
-    auto tIn = Vector3f(std::min(t1.x, t2.x), std::min(t1.y, t2.y), std::min(t1.z, t2.z));
-    auto tOut = Vector3f(std::max(t1.x, t2.x), std::max(t1.y, t2.y), std::max(t1.z, t2.z));
+    auto tMin = Vector3f::Min(t1, t2);
+    auto tMax = Vector3f::Max(t1, t2);
 
-    auto tMin = std::max(std::max(tIn.x, tIn.y), tIn.z);
-    auto tMax = std::min(std::max(tOut.x, tOut.y), tOut.z);
+    auto tEnter = std::max(std::max(tMin.x, tMin.y), tMin.z);
+    auto tExit = std::min(std::min(tMax.x, tMax.y), tMax.z);
 
-    return tMax > tMin && tMax > 0;
+    return tExit >= tEnter && tExit > 0;
 }
 
 inline Bounds3 Union(const Bounds3& b1, const Bounds3& b2)

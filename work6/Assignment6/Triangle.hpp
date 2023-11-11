@@ -239,7 +239,7 @@ inline Intersection Triangle::getIntersection(Ray ray)
         inter.normal = normal;
         inter.distance = t_tmp;
         inter.happened = true;
-        inter.coords = Vector3f(u, v, 0);
+        inter.coords = ray(t_tmp);
     }
     else
     {
